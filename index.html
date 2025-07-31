@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert Advisor Unlimited MT4 - Automatize Seus Lucros no Forex</title>
+    <meta name="description" content="Descubra nossa coleção exclusiva de 300+ Expert Advisors profissionais. Estratégias testadas e aprovadas por traders experientes.">
+    <meta name="keywords" content="expert advisor, mt4, forex, trading, robot trading, automatico">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+        }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #475569;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+
+        /* Professional Button Animations */
+        .btn-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-hover:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-hover:active {
+            transform: translateY(0);
+        }
+
+        /* Card Hover Effects */
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-hover:hover .card-image {
+            transform: scale(1.1);
+        }
+
+        .card-image {
+            transition: transform 0.5s ease;
+        }
+
+        /* Text Selection */
+        ::selection {
+            background: rgba(251, 191, 36, 0.3);
+            color: #fbbf24;
+        }
+
+        /* Professional Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.025em;
+        }
+
+        .line-clamp-4 {
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Hero Background */
+        .hero-bg {
+            background-image: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwzfHxmb3JleCUyMHRyYWRpbmd8ZW58MHx8fHwxNzUzOTA4NDIyfDA&ixlib=rb-4.1.0&q=85');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Loading Animation */
+        .loading-spinner {
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Show/Hide functionality */
+        .hidden-cards {
+            display: none;
+        }
+
+        .show-cards {
+            display: block;
+        }
+
+        /* SVG Icons */
+        .icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            fill: currentColor;
+        }
+
+        .icon-star {
+            width: 1rem;
+            height: 1rem;
+            fill: currentColor;
+        }
+    </style>
+</head>
+<body class="gradient-bg">
+    <!-- Header with Logo -->
+    <header class="relative z-50 bg-black bg-opacity-20 backdrop-blur-md border-b border-slate-700 border-opacity-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-center">
+                <div class="text-center">
+                    <h1 class="text-3xl font-bold bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 bg-clip-text text-transparent">
+                        Expert Advisor Unlimited
+                    </h1>
+                    <p class="text-sm text-slate-300 mt-1 tracking-wider">MT4</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="relative h-96 overflow-hidden">
+        <div class="absolute inset-0 hero-bg">
+            <div class="absolute inset-0 bg-gradient-to-r from-black from-opacity-80 via-black via-opacity-60 to-transparent"></div>
+        </div>
+        
+        <div class="relative z-10 h-full flex items-center justify-start max-w-7xl mx-auto px-6">
+            <div class="max-w-2xl text-left">
+                <h2 class="text-5xl font-bold text-white mb-4 leading-tight">
+                    Automatize Seus 
+                    <span class="block text-amber-400">Lucros no Forex</span>
+                </h2>
+                <p class="text-xl text-slate-200 mb-8 leading-relaxed">
+                    Descubra nossa coleção exclusiva de 300+ Expert Advisors profissionais. 
+                    Estratégias testadas e aprovadas por traders experientes.
+                </p>
+                <div class="flex items-center space-x-8 text-slate-300">
+                    <div class="flex items-center space-x-2">
+                        <svg class="icon text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        <span>+50.000 Traders</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <svg class="icon text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                        <span>100% Seguro</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <svg class="icon text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7"></circle>
+                            <polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"></polyline>
+                        </svg>
+                        <span>Aprovado por Experts</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-black bg-opacity-30 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                <div class="space-y-2">
+                    <div class="text-3xl font-bold text-amber-400">300+</div>
+                    <div class="text-slate-300">Expert Advisors</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-3xl font-bold text-emerald-400">98%</div>
+                    <div class="text-slate-300">Taxa de Sucesso</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-3xl font-bold text-blue-400">24/7</div>
+                    <div class="text-slate-300">Suporte Técnico</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-3xl font-bold text-purple-400">8</div>
+                    <div class="text-slate-300">Atualizações Grátis</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expert Advisors Grid -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-white mb-4">
+                    Nossa Coleção de Expert Advisors
+                </h3>
+                <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+                    Cada Expert Advisor foi cuidadosamente testado e otimizado para maximizar seus lucros no mercado Forex
+                </p>
+            </div>
+
+            <div id="ea-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Expert Advisors cards will be generated by JavaScript -->
+            </div>
+
+            <!-- Loading Indicator -->
+            <div id="loading-indicator" class="text-center py-12 hidden">
+                <div class="inline-flex items-center space-x-2 text-slate-400">
+                    <div class="loading-spinner rounded-full h-6 w-6 border-b-2 border-amber-400"></div>
+                    <span>Carregando mais Expert Advisors...</span>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div id="load-more-section" class="text-center mt-12">
+                <button id="load-more-btn" class="btn-hover bg-slate-700 hover:bg-slate-600 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-300">
+                    Carregar Mais
+                </button>
+            </div>
+
+            <!-- End Message -->
+            <div id="end-message" class="text-center py-12 hidden">
+                <p class="text-slate-400 text-lg">
+                    ?? Você visualizou todos os nossos 300 Expert Advisors!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Mock data for Expert Advisors
+        const eaTypes = [
+            'Scalping', 'Trend Following', 'Grid Trading', 'Martingale', 'News Trading',
+            'Breakout', 'Mean Reversion', 'Arbitrage', 'High Frequency', 'Swing Trading'
+        ];
+        
+        const currencies = ['EURUSD', 'GBPUSD', 'USDJPY', 'AUDUSD', 'USDCAD', 'NZDUSD', 'USDCHF'];
+        
+        const descriptions = [
+            "Expert Advisor profissional desenvolvido para maximizar lucros através de análise técnica avançada e gestão de risco otimizada. Utiliza indicadores personalizados e algoritmos de machine learning para identificar as melhores oportunidades de entrada no mercado.",
+            "Sistema automatizado de trading que combina múltiplas estratégias para diversificar riscos e aumentar a consistência dos resultados. Ideal para traders que buscam performance estável e crescimento constante do capital.",
+            "Robô de trading altamente sofisticado com inteligência artificial integrada. Analisa padrões de mercado em tempo real e executa operações com precisão milimétrica. Perfeito para traders profissionais e iniciantes.",
+            "Expert Advisor revolucionário que utiliza redes neurais para prever movimentos do mercado. Sistema adapta-se automaticamente às condições de mercado, garantindo performance superior em qualquer cenário econômico.",
+            "Estratégia automatizada focada em scalping de alta frequência. Executa centenas de operações por dia com stop loss e take profit otimizados. Desenvolvido por traders profissionais com mais de 10 anos de experiência.",
+            "Sistema de trading baseado em análise de volume e fluxo de ordens. Identifica pontos de entrada precisos através de algoritmos proprietários. Compatível com todas as principais corretoras e timeframes.",
+            "Expert Advisor multi-timeframe que combina análise técnica clássica com indicadores modernos. Gestão de risco avançada com trailing stop dinâmico e proteção contra drawdowns excessivos.",
+            "Robô automatizado especializado em trading de notícias econômicas. Monitora calendário econômico em tempo real e executa operações nos momentos de maior volatilidade do mercado.",
+            "Sistema de grid trading inteligente com recuperação automática. Converte operações perdedoras em lucro através de estratégia matemática comprovada. Ideal para mercados laterais e trending.",
+            "Expert Advisor focado em breakouts de suporte e resistência. Utiliza algoritmos avançados para identificar rompimentos verdadeiros e evitar falsos sinais. Performance consistente em todos os pares de moedas."
+        ];
+
+        function getRandomElement(array) {
+            return array[Math.floor(Math.random() * array.length)];
+        }
+
+        // Generate Expert Advisors data
+        const expertAdvisors = Array.from({ length: 300 }, (_, index) => {
+            return {
+                id: index + 1,
+                name: `${getRandomElement(eaTypes)} Pro ${index + 1}`,
+                description: getRandomElement(descriptions),
+                image: `https://picsum.photos/400/300?random=${index + 1}&blur=0`,
+                rating: (4.0 + Math.random() * 1.0).toFixed(1),
+                winRate: `${(75 + Math.random() * 20).toFixed(0)}%`,
+                downloads: `${Math.floor(Math.random() * 50000) + 1000}`,
+                profitability: getRandomElement(['Alta', 'Média', 'Excelente']),
+                currency: getRandomElement(currencies),
+                timeframe: getRandomElement(['M1', 'M5', 'M15', 'M30', 'H1', 'H4', 'D1']),
+                strategy: getRandomElement(eaTypes),
+                price: Math.floor(Math.random() * 500) + 50,
+                category: getRandomElement(['Scalping', 'Day Trading', 'Swing Trading', 'Position Trading'])
+            };
+        });
+
+        let visibleItems = 12;
+        const grid = document.getElementById('ea-grid');
+        const loadMoreBtn = document.getElementById('load-more-btn');
+        const loadMoreSection = document.getElementById('load-more-section');
+        const endMessage = document.getElementById('end-message');
+        const loadingIndicator = document.getElementById('loading-indicator');
+
+        function getProfitabilityClass(profitability) {
+            switch(profitability) {
+                case 'Alta': return 'bg-emerald-500 bg-opacity-80 text-white';
+                case 'Média': return 'bg-amber-500 bg-opacity-80 text-white';
+                default: return 'bg-slate-500 bg-opacity-80 text-white';
+            }
+        }
+
+        function createExpertAdvisorCard(ea) {
+            return `
+                <div class="card-hover group bg-slate-800 bg-opacity-50 backdrop-blur-sm rounded-xl border border-slate-700 border-opacity-50 overflow-hidden hover:border-amber-500 hover:border-opacity-50">
+                    <div class="relative overflow-hidden">
+                        <img src="${ea.image}" alt="${ea.name}" class="card-image w-full h-48 object-cover">
+                        <div class="absolute top-3 right-3">
+                            <div class="flex items-center space-x-1 bg-black bg-opacity-70 backdrop-blur-sm rounded-full px-2 py-1">
+                                <svg class="icon-star text-amber-400" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <span class="text-white text-sm">${ea.rating}</span>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-3 left-3">
+                            <span class="px-2 py-1 rounded-full text-xs font-medium ${getProfitabilityClass(ea.profitability)}">
+                                ${ea.profitability}
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <h4 class="text-lg font-semibold text-white mb-2 group-hover:text-amber-400 transition-colors">
+                            ${ea.name}
+                        </h4>
+                        <p class="text-slate-400 text-sm mb-4 leading-relaxed line-clamp-4">
+                            ${ea.description}
+                        </p>
+                        
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="text-slate-300 text-sm flex items-center">
+                                <svg class="icon text-emerald-400 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="23,6 13.5,15.5 8.5,10.5 1,18"></polyline>
+                                    <polyline points="17,6 23,6 23,12"></polyline>
+                                </svg>
+                                ${ea.winRate} Win Rate
+                            </div>
+                            <div class="text-slate-300 text-sm flex items-center">
+                                <svg class="icon text-blue-400 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="7,10 12,15 17,10"></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg>
+                                ${ea.downloads}
+                            </div>
+                        </div>
+                        
+                        <button class="btn-hover w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-medium py-2 px-4 rounded-lg">
+                            Download Grátis
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderExpertAdvisors() {
+            const html = expertAdvisors.slice(0, visibleItems).map(createExpertAdvisorCard).join('');
+            grid.innerHTML = html;
+            
+            if (visibleItems >= expertAdvisors.length) {
+                loadMoreSection.classList.add('hidden');
+                endMessage.classList.remove('hidden');
+            }
+        }
+
+        function loadMore() {
+            loadingIndicator.classList.remove('hidden');
+            loadMoreBtn.classList.add('hidden');
+            
+            setTimeout(() => {
+                visibleItems = Math.min(visibleItems + 12, expertAdvisors.length);
+                renderExpertAdvisors();
+                loadingIndicator.classList.add('hidden');
+                
+                if (visibleItems < expertAdvisors.length) {
+                    loadMoreBtn.classList.remove('hidden');
+                    loadMoreBtn.innerHTML = `Carregar Mais (${expertAdvisors.length - visibleItems} restantes)`;
+                }
+            }, 1000);
+        }
+
+        // Event listeners
+        loadMoreBtn.addEventListener('click', loadMore);
+
+        // Infinite scroll
+        window.addEventListener('scroll', () => {
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 1000) {
+                if (visibleItems < expertAdvisors.length && !loadingIndicator.classList.contains('loading')) {
+                    loadMore();
+                }
+            }
+        });
+
+        // Initial render
+        renderExpertAdvisors();
+    </script>
+</body>
+</html>
